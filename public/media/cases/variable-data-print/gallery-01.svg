@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <rect width="1200" height="900" fill="#101116"/>
+  <rect x="36" y="36" width="1128" height="828" fill="none" stroke="#3b3f4b" stroke-width="3"/>
+  <text x="600" y="430" fill="#ececec" text-anchor="middle" font-size="48" font-family="Space Grotesk, Sora, sans-serif">variable-data-print - gallery 01</text>
+  <text x="600" y="490" fill="#9ca1b0" text-anchor="middle" font-size="24" font-family="Space Grotesk, Sora, sans-serif">Replace with final media</text>
+</svg>

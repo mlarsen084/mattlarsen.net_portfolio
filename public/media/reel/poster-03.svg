@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#0f1014"/>
+  <circle cx="640" cy="360" r="84" fill="#272b38"/>
+  <polygon points="620,320 620,400 690,360" fill="#d8dbe4"/>
+  <text x="640" y="540" fill="#f0f0f0" text-anchor="middle" font-size="42" font-family="Space Grotesk, Sora, sans-serif">Reel Placeholder 3</text>
+</svg>

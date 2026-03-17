@@ -1,0 +1,82 @@
+[
+  {
+    "id": "reel-01",
+    "title": "Rates Grab Reel",
+    "video": "/media/reel/ara-rates-grab-reel.mp4",
+    "poster": "/media/reel/ara-rates-grab-reel-poster.jpg",
+    "caption": "Sharp vertical cut built to stop the scroll fast and land the rates message immediately.",
+    "duration": "00:06",
+    "has_audio": true,
+    "aspect_ratio": "9 / 16"
+  },
+  {
+    "id": "reel-02",
+    "title": "Attack Campaign Ad",
+    "video": "/media/reel/attack-campaign-labour.mp4",
+    "poster": "/media/reel/attack-campaign-labour-poster.jpg",
+    "caption": "Landscape campaign hit with stronger narrative pressure, pacing, and contrast.",
+    "duration": "00:17",
+    "has_audio": true,
+    "aspect_ratio": "16 / 9"
+  },
+  {
+    "id": "reel-03",
+    "title": "Household Tax",
+    "video": "/media/reel/household-tax.mp4",
+    "poster": "/media/reel/household-tax-poster.jpg",
+    "caption": "A cleaner cost-of-living cut that compresses the message without losing punch.",
+    "duration": "00:12",
+    "has_audio": true,
+    "aspect_ratio": "16 / 9"
+  },
+  {
+    "id": "reel-04",
+    "title": "Kiwis Disagree",
+    "video": "/media/reel/kiwis-disagree.mp4",
+    "poster": "/media/reel/kiwis-disagree-poster.jpg",
+    "caption": "Tighter portrait framing and rhythm designed for stronger feed retention.",
+    "duration": "00:06",
+    "has_audio": true,
+    "aspect_ratio": "4 / 5"
+  },
+  {
+    "id": "reel-05",
+    "title": "Bureaucrats Paper Style",
+    "video": "/media/reel/bureaucrats-paper-style.mp4",
+    "poster": "/media/reel/bureaucrats-paper-style-poster.jpg",
+    "caption": "Paper-style social video using texture and movement to make policy feel more tactile.",
+    "duration": "00:22",
+    "has_audio": true,
+    "aspect_ratio": "9 / 16"
+  },
+  {
+    "id": "reel-06",
+    "title": "Labour on CGT",
+    "video": "/media/reel/labour-on-cgt.mp4",
+    "poster": "/media/reel/labour-on-cgt-poster.jpg",
+    "caption": "Typography-led explainer cut for clearer issue framing and stronger social readability.",
+    "duration": "00:28",
+    "has_audio": true,
+    "aspect_ratio": "9 / 16"
+  },
+  {
+    "id": "reel-07",
+    "title": "Shrinking Economy",
+    "video": "/media/reel/shrinking-economy.mp4",
+    "poster": "/media/reel/shrinking-economy-poster.jpg",
+    "caption": "Motion and paper texture used to carry a dense point without losing pace.",
+    "duration": "00:25",
+    "has_audio": true,
+    "aspect_ratio": "9 / 16"
+  },
+  {
+    "id": "reel-08",
+    "title": "Declan Vertical Cut",
+    "video": "/media/reel/declan-vertical-cut.mp4",
+    "poster": "/media/reel/declan-vertical-cut-poster.jpg",
+    "caption": "Vertical social edit balancing message clarity with energy and personality.",
+    "duration": "00:25",
+    "has_audio": true,
+    "aspect_ratio": "9 / 16"
+  }
+]
