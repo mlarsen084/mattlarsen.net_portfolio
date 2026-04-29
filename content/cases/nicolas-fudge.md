@@ -5,8 +5,8 @@ year: "2025"
 client_or_org: "Taxpayers' Union"
 role: "Creative Media Specialist"
 challenge: "Translate a dense fiscal message into a campaign people would stop for, remember, and talk about."
-approach: "Built the satirical Nicola's Fudge brand across packaging, graphics, print collateral, and campaign presentation, then directed and finished the award-winning film solo using Premiere Pro, After Effects, and video-generation models."
-outcome: "The campaign cut through nationally and was later recognised with two international Reed Awards, including Best International Online Video (National) for the video created in-house by Matthew Larsen."
+approach: "Built the satirical Nicola's Fudge campaign world across packaging, graphics, print collateral, and presentation, then directed and finished the award-winning film solo using Premiere Pro, After Effects, and video-generation models."
+outcome: "The campaign cut through nationally and was later recognised with two international Reed Awards, including Best International Online Video (National) for the film created in-house by Matthew Larsen."
 metrics:
   - "Winner: Best International Campaign (National)"
   - "Winner: Best International Online Video (National)"
@@ -30,8 +30,8 @@ tags:
   - "Packaging"
   - "Motion"
 ---
-Nicola's Fudge was built as a satirical campaign world rather than a one-off visual. The idea had to carry serious fiscal criticism while still feeling accessible, memorable, and shareable across physical packaging, digital collateral, and campaign storytelling.
+Nicola's Fudge was built as a satirical campaign world rather than a one-off visual. The idea had to carry serious fiscal criticism while still feeling accessible, memorable, and shareable across packaging, digital collateral, and campaign storytelling.
 
-What makes it strong portfolio material is the range of execution inside one system. The same concept had to feel credible on-pack, legible in campaign graphics, and distinctive enough to support the film and surrounding rollout.
+What makes it strong portfolio material is the range of execution held inside one system. The same concept had to feel credible on-pack, legible in campaign graphics, and distinctive enough to support the film and the surrounding rollout.
 
-The film itself was a solo piece of work by Matthew Larsen, directed and built using Premiere Pro, After Effects, and various video models. That end-to-end execution was later recognised with two Reed Awards overall and a win in Best International Online Video (National).
+The film itself was a solo piece of work by Matthew Larsen, directed and finished using Premiere Pro, After Effects, and various video models. That end-to-end execution was later recognised with two Reed Awards overall, including a win in Best International Online Video (National).

@@ -234,7 +234,7 @@ export function WallSection({ items }: Props) {
       <div className="wall-sticky">
         <div className="wall-header">
           <h2 className="section-title">social wall</h2>
-          <p className="section-sub">A parallax field of campaign work, with five proof points pulled forward as you scroll.</p>
+          <p className="section-sub">A live cross-section of campaign work, with five selected pieces pulled forward through the page.</p>
         </div>
 
         <div className="wall-stage" ref={stageRef} onMouseMove={onStageMove} onMouseLeave={onStageLeave} aria-live="polite">

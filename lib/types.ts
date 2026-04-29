@@ -1,6 +1,7 @@
 export type SiteConfig = {
   name: string;
   headline: string;
+  site_url: string;
   email: string;
   linkedin: string;
   cv_styled_url: string;

@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { CSSProperties } from 'react';
-import { ApplicationIntroModal } from '@/components/application-intro-modal';
 import { ExperienceSection } from '@/components/experience-section';
 import { FlowFx } from '@/components/flow-fx';
 import { GlowWord } from '@/components/glow-word';
@@ -17,7 +16,7 @@ const metrics = [
     id: 'daily-output',
     content: (
       <>
-        <GlowWord>15-35</GlowWord> assets shipped daily
+        <GlowWord>15-35</GlowWord> graphics and videos delivered daily
       </>
     ),
   },
@@ -68,7 +67,6 @@ export default function HomePage() {
     <main>
       <FlowFx />
       <SiteNav config={site} />
-      <ApplicationIntroModal image="/media/hero/brisbane-bullets-terry-taylor.webp" />
 
       <section className="cv-hero" id="top">
         <div className="hero-layout">
@@ -114,8 +112,8 @@ export default function HomePage() {
           </div>
         </div>
         <a className="hero-scroll-cue" href="#wall">
-          <span className="hero-scroll-label">Swipe Down</span>
-          <span className="hero-scroll-sub">Work starts below</span>
+          <span className="hero-scroll-label">Scroll Down</span>
+          <span className="hero-scroll-sub">Selected work starts below</span>
         </a>
       </section>
 
@@ -145,19 +143,19 @@ export default function HomePage() {
 
       <section className="selected-work">
         <h2 className="section-title">selected work</h2>
-        <p className="section-sub">Handpicked visual snapshots from campaign execution.</p>
+        <p className="section-sub">A tighter scan of campaign graphics, layouts, and stop-scroll moments.</p>
         <SelectedWorkGrid items={wallItems.slice(0, 30)} />
       </section>
 
       <section id="reel" className="reel-section">
         <h2 className="section-title">reel</h2>
-        <p className="section-sub">A broader motion library with uniform cards and optional sound.</p>
+        <p className="section-sub">Selected motion work across campaign ads, explainers, and fast-turnaround cutdowns.</p>
         <ReelLibrary items={reel} />
       </section>
 
       <section className="skills-section">
         <h2 className="section-title">tools &amp; skills</h2>
-        <p className="section-sub">The toolkit I reach for most.</p>
+        <p className="section-sub">Software, craft skills, and production workflows used most often.</p>
         <div className="skills-groups">
           {skillGroups.map((group) => (
             <article key={group.label} className="skill-group">

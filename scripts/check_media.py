@@ -71,6 +71,7 @@ def main() -> None:
     required_site = [
         'name',
         'headline',
+        'site_url',
         'email',
         'linkedin',
         'cv_styled_url',
@@ -129,6 +130,20 @@ def main() -> None:
 
     ensure(len(set(focus_orders)) == len(focus_orders), 'focus_order values must be unique', errors)
     ensure(sorted(focus_orders) == [1, 2, 3, 4, 5], f'focus_order values must be [1..5], found {sorted(focus_orders)}', errors)
+
+    featured_reel = load_json(CONTENT / 'featured-reel.json')
+    for key in ['id', 'title', 'video', 'poster', 'caption', 'duration', 'has_audio', 'aspect_ratio', 'draft_note']:
+        ensure(key in featured_reel, f'featured reel missing key: {key}', errors)
+
+    ensure(type(featured_reel.get('has_audio')) is bool, 'featured reel has_audio must be boolean', errors)
+
+    featured_video = featured_reel.get('video', '')
+    if isinstance(featured_video, str) and featured_video.startswith('/'):
+        ensure(resolve_public_path(featured_video).exists(), f'missing featured reel video file: {featured_video}', errors)
+
+    featured_poster = featured_reel.get('poster', '')
+    if isinstance(featured_poster, str) and featured_poster.startswith('/'):
+        ensure(resolve_public_path(featured_poster).exists(), f'missing featured reel poster file: {featured_poster}', errors)
 
     reel = load_json(CONTENT / 'reel.json')
     ensure(isinstance(reel, list) and len(reel) > 0, 'reel.json must contain entries', errors)

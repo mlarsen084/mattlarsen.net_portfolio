@@ -24,4 +24,4 @@ tags:
   - "Social"
   - "Motion"
 ---
-Placeholder narrative body for future expansion.
+Built to support a fast publishing rhythm, this system focused on keeping output high without letting the work drift visually. Templates, reusable structures, and platform-aware variants made it possible to turn around graphics quickly while maintaining a recognisable standard across channels.

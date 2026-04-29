@@ -24,4 +24,4 @@ tags:
   - "Production"
   - "Systems"
 ---
-Placeholder narrative body for future expansion.
+This work sat at the intersection of design, pre-press, and production reliability. The challenge was not only to generate a large volume of unique outputs, but to do it cleanly and repeatably with the kind of accuracy clients rely on when every code has to be correct.
