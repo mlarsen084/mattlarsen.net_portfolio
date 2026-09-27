@@ -49,51 +49,34 @@ export function PublicationsSection() {
       <div className={styles.projects}>
         {publications.map((project, index) => (
           <article key={project.slug} className={styles.project}>
-            <header className={styles.projectHeader}>
-              <p className={styles.eyebrow}>0{index + 1} / Publication &amp; 3D motion</p>
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <p>{project.motion}</p>
-            </header>
-
             <figure className={styles.videoBlock}>
-              <div className={styles.mediaHeading}>
-                <span>Blender render</span>
-                <span>{project.duration}</span>
-              </div>
               <video
                 className={styles.video}
-                controls
+                autoPlay
+                muted
+                loop
                 playsInline
-                preload="none"
+                preload="metadata"
                 poster={`/media/publications/${project.slug}-poster.jpg`}
                 aria-label={`${project.title} — 3D publication video`}
               >
                 <source src={`/media/publications/${project.slug}.mp4`} type="video/mp4" />
                 <a href={`/media/publications/${project.slug}.mp4`}>Watch the {project.title} video</a>
               </video>
-              <figcaption>Publication artwork brought into 3D and motion.</figcaption>
+              <figcaption>Blender render · {project.duration}</figcaption>
             </figure>
 
-            <div className={styles.document}>
-              <div className={styles.mediaHeading}>
-                <span>Read the publication · {project.pages} pages</span>
-                <a href={`/docs/publications/${project.slug}.pdf`} target="_blank" rel="noreferrer">
-                  Open PDF <span aria-hidden="true">↗</span>
+            <div className={styles.projectCopy}>
+              <p className={styles.eyebrow}>0{index + 1} / Publication &amp; 3D motion</p>
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              <p>{project.motion}</p>
+              <div className={styles.downloadRow}>
+                <a className={styles.download} href={`/docs/publications/${project.slug}.pdf`} download>
+                  Download PDF <span aria-hidden="true">↓</span>
                 </a>
+                <span>{project.pages} pages</span>
               </div>
-              <iframe
-                className={styles.pdf}
-                src={`/docs/publications/${project.slug}.pdf#view=FitH&navpanes=0`}
-                title={`${project.title} — complete ${project.pages}-page PDF`}
-                loading="lazy"
-              />
-              <p className={styles.pdfHelp}>
-                If the preview doesn’t display on your device,{' '}
-                <a href={`/docs/publications/${project.slug}.pdf`} target="_blank" rel="noreferrer">
-                  open the PDF in a new tab
-                </a>.
-              </p>
             </div>
           </article>
         ))}
