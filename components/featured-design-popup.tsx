@@ -26,7 +26,8 @@ export function FeaturedDesignPopup() {
     <dialog
       ref={dialogRef}
       className={styles.dialog}
-      aria-label="Featured design: LOXSAT mission patch"
+      aria-labelledby="featured-design-title"
+      aria-describedby="featured-design-description"
       onClose={() => setIsOpen(false)}
     >
       <button
@@ -40,6 +41,11 @@ export function FeaturedDesignPopup() {
           <path d="m5 5 10 10M15 5 5 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
         </svg>
       </button>
+      <header className={styles.header}>
+        <p className={styles.eyebrow}>Featured design</p>
+        <h2 id="featured-design-title" className={styles.title}>LOXSAT</h2>
+        <p className={styles.subtitle}>Mission patch design</p>
+      </header>
       <img
         className={styles.image}
         src="/media/loxsat.png"
@@ -48,6 +54,12 @@ export function FeaturedDesignPopup() {
         height={1800}
         fetchPriority="high"
       />
+      <div className={styles.copy}>
+        <p id="featured-design-description">
+          A mission patch design bringing together a rocket, satellite, and Earth in a bold circular emblem.
+          Blue and gold details, orbital lines, and stars give the artwork a classic spaceflight feel.
+        </p>
+      </div>
     </dialog>
   );
 }
