@@ -65,12 +65,6 @@
   line-height: 1.65;
 }
 
-.copy .note {
-  margin-top: 10px;
-  font-size: 12px;
-  font-style: italic;
-}
-
 .close {
   position: absolute;
   top: 12px;
