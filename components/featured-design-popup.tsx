@@ -27,7 +27,7 @@ export function FeaturedDesignPopup() {
       ref={dialogRef}
       className={styles.dialog}
       aria-labelledby="featured-design-title"
-      aria-describedby="featured-design-description"
+      aria-describedby="featured-design-description featured-design-note"
       onClose={() => setIsOpen(false)}
     >
       <button
@@ -58,6 +58,9 @@ export function FeaturedDesignPopup() {
         <p id="featured-design-description">
           A mission patch design bringing together a rocket, satellite, and Earth in a bold circular emblem.
           Blue and gold details, orbital lines, and stars give the artwork a classic spaceflight feel.
+        </p>
+        <p id="featured-design-note" className={styles.note}>
+          Created for a current job application.
         </p>
       </div>
     </dialog>
