@@ -6,6 +6,7 @@ import { FlowFx } from '@/components/flow-fx';
 import { GlowWord } from '@/components/glow-word';
 import { ReedAwardsSection } from '@/components/reed-awards-section';
 import { ReelLibrary } from '@/components/reel-library';
+import { PublicationsSection } from '@/components/publications-section';
 import { SelectedWorkGrid } from '@/components/selected-work-grid';
 import { SiteNav } from '@/components/site-nav';
 import { WallSection } from '@/components/wall-section';
@@ -140,6 +141,8 @@ export default function HomePage() {
       </section>
 
       <ExperienceSection cases={cases} />
+
+      <PublicationsSection />
 
       <section className="selected-work">
         <h2 className="section-title">selected work</h2>

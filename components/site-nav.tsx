@@ -18,6 +18,7 @@ export function SiteNav({ config }: Props) {
         <a href="#wall">wall</a>
         <a href="#awards">awards</a>
         <a href="#cases">experience</a>
+        <a href="#publications">print &amp; motion</a>
         <a href="#reel">reel</a>
         <a href="#contact">contact</a>
         {photographyExternal ? (
