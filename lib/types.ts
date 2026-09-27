@@ -4,8 +4,7 @@ export type SiteConfig = {
   site_url: string;
   email: string;
   linkedin: string;
-  cv_styled_url: string;
-  cv_ats_url: string;
+  cv_url: string;
   photography_url: string | null;
   hero_video_url: string;
   hero_video_poster_url: string;

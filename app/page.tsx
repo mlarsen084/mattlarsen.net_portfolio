@@ -80,8 +80,8 @@ export default function HomePage() {
               <p>+64 22 394 7708</p>
             </div>
             <div className="hero-links">
-              <a href={site.cv_styled_url} target="_blank" rel="noreferrer">
-                Portfolio CV
+              <a href={site.cv_url} target="_blank" rel="noreferrer">
+                Download CV
               </a>
               <a href={site.linkedin} target="_blank" rel="noreferrer">
                 LinkedIn
@@ -187,11 +187,8 @@ export default function HomePage() {
           LinkedIn: <a href={site.linkedin}>Open profile</a>
         </p>
         <div className="contact-links">
-          <a href={site.cv_styled_url} target="_blank" rel="noreferrer">
-            Styled CV
-          </a>
-          <a href={site.cv_ats_url} target="_blank" rel="noreferrer">
-            ATS CV
+          <a href={site.cv_url} target="_blank" rel="noreferrer">
+            Download CV
           </a>
           {hasPhotographyExternal ? (
             <a href={site.photography_url ?? '#'} target="_blank" rel="noreferrer">

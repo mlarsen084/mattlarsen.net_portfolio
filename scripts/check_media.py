@@ -74,8 +74,7 @@ def main() -> None:
         'site_url',
         'email',
         'linkedin',
-        'cv_styled_url',
-        'cv_ats_url',
+        'cv_url',
         'photography_url',
         'hero_video_url',
         'hero_video_poster_url',
@@ -84,7 +83,7 @@ def main() -> None:
     for key in required_site:
         ensure(key in site, f'missing site key: {key}', errors)
 
-    for cv_key in ['cv_styled_url', 'cv_ats_url']:
+    for cv_key in ['cv_url']:
         cv_ref = site.get(cv_key, '')
         if isinstance(cv_ref, str) and cv_ref.startswith('/'):
             ensure(resolve_public_path(cv_ref).exists(), f'missing cv file: {cv_ref}', errors)
