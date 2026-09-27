@@ -25,7 +25,7 @@ const metrics = [
     id: 'weekly-reach',
     content: (
       <>
-        ~<GlowWord>500,000</GlowWord> weekly social reach
+        ~<GlowWord>1 million</GlowWord> weekly views
       </>
     ),
   },
@@ -83,6 +83,9 @@ export default function HomePage() {
               <a href={site.cv_url} target="_blank" rel="noreferrer">
                 Download CV
               </a>
+              <a href={site.print_portfolio_url} target="_blank" rel="noreferrer">
+                Print portfolio
+              </a>
               <a href={site.linkedin} target="_blank" rel="noreferrer">
                 LinkedIn
               </a>
@@ -127,7 +130,7 @@ export default function HomePage() {
         <p data-reveal>
           Graphic designer focused on brand systems, typography, visual hierarchy, and campaign storytelling across digital,
           motion, and print. Delivers <GlowWord>15-35</GlowWord> social graphics and videos daily, supporting approximately{' '}
-          <GlowWord>500,000 weekly reach</GlowWord> across social channels and work later recognised with{' '}
+          <GlowWord>1 million weekly views</GlowWord> across social channels and work later recognised with{' '}
           <GlowWord>two international Reed Awards</GlowWord>.
         </p>
       </section>
@@ -183,12 +186,15 @@ export default function HomePage() {
         <p>
           Email: <a href={`mailto:${site.email}`}>{site.email}</a>
         </p>
-        <p>
-          LinkedIn: <a href={site.linkedin}>Open profile</a>
-        </p>
         <div className="contact-links">
           <a href={site.cv_url} target="_blank" rel="noreferrer">
             Download CV
+          </a>
+          <a href={site.print_portfolio_url} target="_blank" rel="noreferrer">
+            Print portfolio
+          </a>
+          <a href={site.linkedin} target="_blank" rel="noreferrer">
+            LinkedIn
           </a>
           {hasPhotographyExternal ? (
             <a href={site.photography_url ?? '#'} target="_blank" rel="noreferrer">
