@@ -15,11 +15,12 @@ export function SiteNav({ config }: Props) {
         ML
       </Link>
       <nav>
-        <a href="#wall">wall</a>
-        <a href="#awards">awards</a>
-        <a href="#cases">experience</a>
+        <a href="#rocket-lab">rocket lab</a>
         <a href="#publications">print &amp; motion</a>
+        <a href="#cases">experience</a>
+        <a href="#wall">wall</a>
         <a href="#reel">reel</a>
+        <a href="#awards">awards</a>
         <a href="#contact">contact</a>
         {photographyExternal ? (
           <a href={photographyHref} target="_blank" rel="noreferrer">

@@ -6,6 +6,7 @@ import { FlowFx } from '@/components/flow-fx';
 import { GlowWord } from '@/components/glow-word';
 import { ReedAwardsSection } from '@/components/reed-awards-section';
 import { ReelLibrary } from '@/components/reel-library';
+import { RocketLabSection } from '@/components/rocket-lab-section';
 import { PublicationsSection } from '@/components/publications-section';
 import { SelectedWorkGrid } from '@/components/selected-work-grid';
 import { SiteNav } from '@/components/site-nav';
@@ -68,6 +69,7 @@ export default function HomePage() {
     <main>
       <FlowFx />
       <SiteNav config={site} />
+      <RocketLabSection />
 
       <section className="cv-hero" id="top">
         <div className="hero-layout">
@@ -115,11 +117,15 @@ export default function HomePage() {
             />
           </div>
         </div>
-        <a className="hero-scroll-cue" href="#wall">
+        <a className="hero-scroll-cue" href="#publications">
           <span className="hero-scroll-label">Scroll Down</span>
           <span className="hero-scroll-sub">Selected work starts below</span>
         </a>
       </section>
+
+      <PublicationsSection />
+
+      <ExperienceSection cases={cases} />
 
       <WallSection items={wallItems} />
 
@@ -142,10 +148,6 @@ export default function HomePage() {
           </p>
         ))}
       </section>
-
-      <ExperienceSection cases={cases} />
-
-      <PublicationsSection />
 
       <section className="selected-work">
         <h2 className="section-title">selected work</h2>

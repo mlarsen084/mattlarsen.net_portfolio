@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
-import { FeaturedDesignPopup } from '@/components/featured-design-popup';
 import { getSiteConfig } from '@/lib/content';
 import './globals.css';
 
@@ -108,7 +107,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {JSON.stringify(websiteJsonLd)}
         </Script>
         {children}
-        <FeaturedDesignPopup />
       </body>
     </html>
   );
