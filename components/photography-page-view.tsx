@@ -31,11 +31,9 @@ export function PhotographyPageView({ email, linkedin, photos, collections }: Pr
     <>
       <section className="photo-about-section photo-about-section--compact">
         <div className="photo-about-copy" data-reveal>
-          <p className="photo-kicker">Photography</p>
           <h1 className="section-title">photography</h1>
           <p className="photo-about-text">
-            People, places, and live moments. A selection of my photography across public affairs, events,
-            campaigns, portraits, and landscapes.
+            Event, campaign, portrait, and landscape photography.
           </p>
           <div className="photo-about-links">
             <Link href="/">Back to design portfolio</Link>
@@ -49,11 +47,7 @@ export function PhotographyPageView({ email, linkedin, photos, collections }: Pr
 
       <section className="photo-gallery-section">
         <div className="photo-gallery-intro" data-reveal>
-          <p className="photo-kicker">Selected frames</p>
-          <h2 className="section-title">selected frames</h2>
-          <p className="section-sub">
-            A first look across atmosphere, people, and documentary observation.
-          </p>
+          <h2 className="section-title">selected photos</h2>
         </div>
 
         <div className="photo-gallery-grid">
@@ -80,11 +74,7 @@ export function PhotographyPageView({ email, linkedin, photos, collections }: Pr
 
       <section className="photo-collections-section">
         <div className="photo-gallery-intro" data-reveal>
-          <p className="photo-kicker">Collections</p>
-          <h2 className="section-title">more from the portfolio</h2>
-          <p className="section-sub">
-            From crowds and conversations to campaign details and the city around them.
-          </p>
+          <h2 className="section-title">collections</h2>
         </div>
 
         <div className="photo-collections-stack">

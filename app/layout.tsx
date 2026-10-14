@@ -7,7 +7,7 @@ const site = getSiteConfig();
 const siteUrl = new URL(site.site_url);
 const title = `${site.name} | Graphic Designer`;
 const description =
-  'Campaign and visual communication designer across social, motion, and print. Selected design, photography, and Reed Award-winning creative by Matthew Larsen.';
+  'Graphic design, video, print, and photography by Matthew Larsen, based in Wellington, New Zealand.';
 const ogImage = '/og/matthew-larsen-portfolio-og.svg';
 
 export const metadata: Metadata = {

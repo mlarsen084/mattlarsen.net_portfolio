@@ -7,7 +7,7 @@ import { getPhotographyItems, getSiteConfig } from '@/lib/content';
 export const metadata: Metadata = {
   title: 'Photography | Matthew Larsen',
   description:
-    'Selected photography by Matthew Larsen across public affairs, documentary coverage, portraits, community work, and live events.',
+    'Event, campaign, portrait, and landscape photography by Matthew Larsen.',
   alternates: {
     canonical: '/photography',
   },
@@ -18,10 +18,10 @@ export default function PhotographyPage() {
   const items = getPhotographyItems();
   const photos = items.filter((photo) => photo.featured);
   const descriptions: Record<string, string> = {
-    'Public affairs and protest': 'Speakers, flags, crowds, and press coverage in public spaces.',
-    'Campaigns in the street': 'Campaign graphics and live activity in their street-level setting.',
-    'Events and people': 'Conversations, production details, and the people in the room.',
-    'Landscape and place': 'Architecture, urban messages, and quieter views beyond the city.',
+    'Public affairs and protests': 'Speakers, flags, crowds, and press coverage in public spaces.',
+    'Campaign photography': 'Campaign events, truck graphics, and street interviews.',
+    'Events and portraits': 'Panels, portraits, audiences, and event details.',
+    'Landscapes and streets': 'Buildings, billboards, and landscapes.',
   };
   const collections = Object.entries(descriptions).map(([title, description]) => ({
     title,

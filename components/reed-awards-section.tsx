@@ -12,7 +12,7 @@ export function ReedAwardsSection({ video, videoPoster }: Props) {
     <section id="awards" className="reed-section">
       <div className="reed-layout">
         <div className="reed-copy" data-reveal>
-          <p className="reed-kicker">International Proof</p>
+          <p className="reed-kicker">Awards</p>
           <h2 className="section-title">Reed Awards</h2>
           <div className="reed-stats">
             <span>
@@ -25,33 +25,20 @@ export function ReedAwardsSection({ video, videoPoster }: Props) {
               <GlowWord>Finalist:</GlowWord> Best Public Affairs Campaign
             </span>
           </div>
-          <blockquote className="reed-quote">
-            “The other win: <GlowWord>Best International Online Video (National)</GlowWord> puts the work of our{' '}
-            <GlowWord>25-year-old</GlowWord> in-house graphic designer, <GlowWord>Matthew Larsen</GlowWord> on par with what
-            the best advertising and creative agencies can produce with <GlowWord>seven or eight figure budgets</GlowWord>.”
-          </blockquote>
           <p className="reed-lead">
-            The Nicola&apos;s Fudge film was <GlowWord>conceived, directed, and finished solo</GlowWord> by{' '}
-            <GlowWord>Matthew Larsen</GlowWord>, using <GlowWord>Premiere Pro</GlowWord>, <GlowWord>After Effects</GlowWord>,
-            and <GlowWord>video-generation models</GlowWord>.
+            Nicola&apos;s Fudge won <GlowWord>two international Reed Awards</GlowWord>, for the campaign and its video.
+            I developed, directed, and edited the film using Premiere Pro, After Effects, and AI video tools.
           </p>
           <div className="reed-detail-stack">
             <p>
-              Nicola&apos;s Fudge worked as a complete campaign system, spanning packaging, social, a landing page, rapid
-              cutdowns, and the film that later won internationally.
-            </p>
-            <p>
-              In the same note to the team, Jordan placed the wider campaign win alongside work recognised for Claudia
-              Sheinbaum&apos;s Mexican Presidential Campaign, the Liberal Party of Canada 2021 Election Campaign,{' '}
-              <GlowWord>NATO&apos;s We Are NATO</GlowWord>, and Justin Trudeau&apos;s Bring Canada Back campaign.
+              My design work for the campaign included packaging, social graphics, and print material.
             </p>
           </div>
         </div>
 
         <div className="reed-side" data-reveal>
           <p className="reed-side-copy">
-            Two international wins from a lean in-house team, with the online video category awarded to a piece made end to
-            end by one designer.
+            Awarded to Nicola&apos;s Fudge at the Reed Awards.
           </p>
           <div className="reed-media-column">
             <figure className="reed-media-card">
@@ -60,7 +47,7 @@ export function ReedAwardsSection({ video, videoPoster }: Props) {
               </video>
               <figcaption className="reed-media-caption">
                 <strong>Best International Online Video (National)</strong>
-                <span>Nicola&apos;s Fudge, directed and finished in-house by Matthew Larsen.</span>
+                <span>Nicola&apos;s Fudge film.</span>
               </figcaption>
             </figure>
             <figure className="reed-media-card is-second">
@@ -69,7 +56,7 @@ export function ReedAwardsSection({ video, videoPoster }: Props) {
               </video>
               <figcaption className="reed-media-caption">
                 <strong>Best International Campaign (National)</strong>
-                <span>A campaign system recognised alongside major international political work.</span>
+                <span>Nicola&apos;s Fudge campaign.</span>
               </figcaption>
             </figure>
           </div>

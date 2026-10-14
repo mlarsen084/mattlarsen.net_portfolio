@@ -15,7 +15,7 @@ npm run dev
 - `content/wall-items.json` (30 items, exactly 5 with `focus_slot: true`)
 - `content/cases/*.md`
 - `content/reel.json`
-- `content/photography.json` (photo dimensions, captions, collections, and homepage selection)
+- `content/photography.json` (photo dimensions, captions, collections, and selected photos)
 
 ## Media workflow
 
@@ -29,6 +29,6 @@ npm run media:check
 ## Notes
 
 - Photography nav auto-links externally if `photography_url` is provided in `site.json`.
-- If `photography_url` is `null`, nav points to the homepage photography section, with the full gallery at `/photography`.
+- If `photography_url` is `null`, nav links to the separate photography page at `/photography`.
 - Portfolio photos are served as optimized WebP files in `public/media/photography/portfolio`.
 - The production site is the Cloudflare Pages project `portfolio`, published from the static `out/` export.

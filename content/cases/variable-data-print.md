@@ -4,13 +4,13 @@ slug: "variable-data-print"
 year: "2024"
 client_or_org: "McDowall Print"
 role: "Graphic Design, Digital Print & Pre-Press Specialist"
-challenge: "Deliver large-scale unique-code production with dependable print quality and zero workflow drift."
-approach: "Engineered a merge-and-RIP production process for high-volume unique Code 128 and QR outputs."
-outcome: "Successfully produced over 100,000 unique cards with strong repeat-client trust."
+challenge: "Produce cards with unique barcodes and QR codes at print quality."
+approach: "I set up data merging and print processing for Code 128 barcodes and QR codes."
+outcome: "Produced more than 100,000 unique cards for repeat clients."
 metrics:
   - "100,000+ unique outputs"
-  - "Reliable pre-press pipeline"
-  - "Repeat client retention"
+  - "Pre-press and data merging"
+  - "Repeat clients"
 cover_image: "/media/cases/variable-data-print/cover.svg"
 gallery:
   - "/media/cases/variable-data-print/gallery-01.svg"
@@ -24,4 +24,4 @@ tags:
   - "Production"
   - "Systems"
 ---
-This work sat at the intersection of design, pre-press, and production reliability. The challenge was not only to generate a large volume of unique outputs, but to do it cleanly and repeatably with the kind of accuracy clients rely on when every code has to be correct.
+I prepared artwork and variable data for more than 100,000 printed cards. The process combined data merging, Code 128 barcodes, QR codes, and print-ready file preparation.

@@ -6,12 +6,11 @@ import { FlowFx } from '@/components/flow-fx';
 import { GlowWord } from '@/components/glow-word';
 import { ReedAwardsSection } from '@/components/reed-awards-section';
 import { ReelLibrary } from '@/components/reel-library';
-import { PhotographySection } from '@/components/photography-section';
 import { PublicationsSection } from '@/components/publications-section';
 import { SelectedWorkGrid } from '@/components/selected-work-grid';
 import { SiteNav } from '@/components/site-nav';
 import { WallSection } from '@/components/wall-section';
-import { getCases, getPhotographyItems, getReelItems, getSiteConfig, getWallItems } from '@/lib/content';
+import { getCases, getReelItems, getSiteConfig, getWallItems } from '@/lib/content';
 
 const metrics = [
   {
@@ -42,7 +41,7 @@ const metrics = [
     id: 'reed-proof',
     content: (
       <>
-        Creative on a <GlowWord>two-time Reed Award-winning</GlowWord> campaign
+        Campaign work recognised with <GlowWord>two Reed Awards</GlowWord>
       </>
     ),
   },
@@ -63,7 +62,6 @@ export default function HomePage() {
   const wallItems = getWallItems();
   const cases = getCases().filter((entry) => entry.featured).slice(0, 4);
   const reel = getReelItems();
-  const photos = getPhotographyItems().filter((photo) => photo.featured);
   const hasPhotographyExternal = Boolean(site.photography_url);
 
   return (
@@ -134,10 +132,10 @@ export default function HomePage() {
           profile
         </h2>
         <p data-reveal>
-          Graphic designer focused on brand systems, typography, visual hierarchy, and campaign storytelling across digital,
-          motion, and print. Delivers <GlowWord>15-35</GlowWord> social graphics and videos daily, supporting approximately{' '}
-          <GlowWord>1 million weekly views</GlowWord> across social channels and work later recognised with{' '}
-          <GlowWord>two international Reed Awards</GlowWord>.
+          I design for social media, video, and print. At the Taxpayers&apos; Union, I produce{' '}
+          <GlowWord>15-35</GlowWord> graphics and videos a day for channels receiving around{' '}
+          <GlowWord>1 million weekly views</GlowWord>. My work on Nicola&apos;s Fudge was recognised with{' '}
+          <GlowWord>two Reed Awards</GlowWord>.
         </p>
       </section>
 
@@ -151,21 +149,19 @@ export default function HomePage() {
 
       <section className="selected-work">
         <h2 className="section-title">selected work</h2>
-        <p className="section-sub">A tighter scan of campaign graphics, layouts, and stop-scroll moments.</p>
+        <p className="section-sub">Campaign graphics and social media work.</p>
         <SelectedWorkGrid items={wallItems.slice(0, 30)} />
       </section>
 
       <section id="reel" className="reel-section">
         <h2 className="section-title">reel</h2>
-        <p className="section-sub">Selected motion work across campaign ads, explainers, and fast-turnaround cutdowns.</p>
+        <p className="section-sub">Campaign videos, ads, and explainers.</p>
         <ReelLibrary items={reel} />
       </section>
 
-      <PhotographySection photos={photos} />
-
       <section className="skills-section">
         <h2 className="section-title">tools &amp; skills</h2>
-        <p className="section-sub">Software, craft skills, and production workflows used most often.</p>
+        <p className="section-sub">Software and skills I use.</p>
         <div className="skills-groups">
           {skillGroups.map((group) => (
             <article key={group.label} className="skill-group">

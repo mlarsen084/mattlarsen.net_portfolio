@@ -4,9 +4,9 @@ slug: "nicolas-fudge"
 year: "2025"
 client_or_org: "Taxpayers' Union"
 role: "Senior Graphic Designer"
-challenge: "Translate a dense fiscal message into a campaign people would stop for, remember, and talk about."
-approach: "Built the satirical Nicola's Fudge campaign world across packaging, graphics, print collateral, and presentation, then directed and finished the award-winning film solo using Premiere Pro, After Effects, and video-generation models."
-outcome: "The campaign cut through nationally and was later recognised with two international Reed Awards, including Best International Online Video (National) for the film created in-house by Matthew Larsen."
+challenge: "Design a satirical campaign about government fiscal policy."
+approach: "I designed the packaging, social graphics, and print material, and directed and edited the film using Premiere Pro, After Effects, and AI video tools."
+outcome: "The campaign won two Reed Awards: Best International Campaign (National) and Best International Online Video (National)."
 metrics:
   - "Winner: Best International Campaign (National)"
   - "Winner: Best International Online Video (National)"
@@ -30,8 +30,6 @@ tags:
   - "Packaging"
   - "Motion"
 ---
-Nicola's Fudge was built as a satirical campaign world rather than a one-off visual. The idea had to carry serious fiscal criticism while still feeling accessible, memorable, and shareable across packaging, digital collateral, and campaign storytelling.
+Nicola's Fudge used a fictional confectionery brand to comment on government fiscal policy. I designed the packaging, graphics, and print material, keeping the same look across the campaign.
 
-What makes it strong portfolio material is the range of execution held inside one system. The same concept had to feel credible on-pack, legible in campaign graphics, and distinctive enough to support the film and the surrounding rollout.
-
-The film itself was a solo piece of work by Matthew Larsen, directed and finished using Premiere Pro, After Effects, and various video models. That end-to-end execution was later recognised with two Reed Awards overall, including a win in Best International Online Video (National).
+I also developed, directed, and edited the film myself, using Premiere Pro, After Effects, and AI video tools. The campaign won two international Reed Awards.

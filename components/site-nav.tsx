@@ -26,7 +26,7 @@ export function SiteNav({ config }: Props) {
             photography
           </a>
         ) : (
-          <a href="#photography">photography</a>
+          <Link href={photographyHref}>photography</Link>
         )}
       </nav>
     </header>

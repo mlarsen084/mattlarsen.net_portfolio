@@ -27,7 +27,7 @@ export function ExperienceSection({ cases }: Props) {
       <section id="cases" className="experience-section">
         <div className="experience-intro" data-reveal>
           <h2 className="section-title">experience</h2>
-          <p className="section-sub">Two featured campaigns, with the narrative on the left and the working media library on the right.</p>
+          <p className="section-sub">Two campaigns I worked on at the Taxpayers' Union.</p>
         </div>
 
         <div className="experience-track">

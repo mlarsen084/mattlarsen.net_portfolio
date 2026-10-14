@@ -4,13 +4,13 @@ slug: "rapid-response-system"
 year: "2025"
 client_or_org: "Taxpayers' Union"
 role: "Senior Graphic Designer"
-challenge: "Sustain high-volume publishing without compromising visual quality or brand consistency."
-approach: "Built repeatable templates, production rituals, and platform-aware design variants for fast turnaround."
-outcome: "Enabled daily output at scale with consistent quality across social channels."
+challenge: "Produce daily social graphics and videos with consistent branding."
+approach: "I built reusable templates and layouts for different social formats."
+outcome: "Supported production of 15-35 graphics and videos a day."
 metrics:
   - "15-35 assets/day"
   - "~1 million weekly views"
-  - "Reduced turnaround friction"
+  - "Reusable templates"
 cover_image: "/media/cases/rapid-response-system/cover.svg"
 gallery:
   - "/media/cases/rapid-response-system/gallery-01.svg"
@@ -24,4 +24,4 @@ tags:
   - "Social"
   - "Motion"
 ---
-Built to support a fast publishing rhythm, this system focused on keeping output high without letting the work drift visually. Templates, reusable structures, and platform-aware variants made it possible to turn around graphics quickly while maintaining a recognisable standard across channels.
+I built reusable templates for daily social posts and videos. Shared layouts and type styles made updates quicker and kept the branding consistent across channels.

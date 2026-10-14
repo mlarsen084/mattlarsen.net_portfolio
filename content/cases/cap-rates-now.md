@@ -4,13 +4,13 @@ slug: "cap-rates-now"
 year: "2025"
 client_or_org: "Taxpayers' Union"
 role: "Senior Graphic Designer"
-challenge: "Build a campaign system that could hold up on a truck wrap, rally signage, social cutdowns, and supporting collateral without losing force."
-approach: "Developed the identity, truck-wrap graphics, motion edits, and rollout assets so the message stayed legible at distance, on camera, and in-feed."
-outcome: "Turned CAP RATES NOW into a real pressure moment: a high-visibility protest activation, a stronger reform narrative around rates caps, and wider fallout for LGNZ leadership."
+challenge: "Create graphics for a rates-cap campaign across print, social media, and video."
+approach: "I designed the campaign identity, truck wrap, signage, social graphics, and video edits."
+outcome: "The truck wrap was used outside the LGNZ conference, alongside the campaign's signage, social posts, and videos."
 metrics:
-  - "18-wheeler truck-wrap protest centrepiece"
+  - "18-wheeler truck wrap"
   - "Parked outside the LGNZ conference"
-  - "Campaign system spanning truck, motion, social, and signage"
+  - "Truck wrap, signage, social graphics, and video"
 cover_image: "/media/cases/cap-rates-now/cover.jpg"
 gallery:
   - "/media/cases/cap-rates-now/gallery-01.jpg"
@@ -31,10 +31,6 @@ tags:
   - "Motion"
   - "Large Format"
 ---
-CAP RATES NOW was built as a campaign identity that had to perform under real-world pressure, not just look good in a single mock-up. The visuals needed to read on a moving truck, outside a conference venue, across rally footage, and in rapid social edits without the message thinning out.
+I designed the CAP RATES NOW identity and adapted it for a truck wrap, rally signage, social posts, and video. The wrap was applied to an 18-wheeler parked outside the Local Government New Zealand conference.
 
-One of the clearest executions was a huge truck wrap applied to an 18-wheeler and parked outside the Local Government New Zealand conference. That turned the campaign into a physical protest moment aimed directly at the sector lobby group pushing for rising residential rates, rather than leaving the message as just another graphic in-feed.
-
-The strength of the project was building one visual language that could hold its shape across those different surfaces. The truck, motion cutdowns, and supporting graphics all carried the same direct hierarchy and high-contrast tone, making the campaign feel broader and more deliberate than a single execution.
-
-The outcome mattered because the campaign became part of a wider pressure environment around local rates reform. The sitting government later announced a rates-cap bill would be introduced within the next three years, and the broader backlash also coincided with Sam Broughton losing the next local election in a landslide, stepping down as LGNZ chair, and more councils leaving the organisation.
+The layouts used large type and contrasting colours so the message was readable at a distance and in event footage.

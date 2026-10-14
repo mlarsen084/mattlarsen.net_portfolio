@@ -234,7 +234,7 @@ export function WallSection({ items }: Props) {
       <div className="wall-sticky">
         <div className="wall-header">
           <h2 className="section-title">social wall</h2>
-          <p className="section-sub">A live cross-section of campaign work, with five selected pieces pulled forward through the page.</p>
+          <p className="section-sub">Social media graphics from my work at the Taxpayers' Union.</p>
         </div>
 
         <div className="wall-stage" ref={stageRef} onMouseMove={onStageMove} onMouseLeave={onStageLeave} aria-live="polite">
@@ -269,7 +269,7 @@ export function WallSection({ items }: Props) {
 
           <div className={`focus-copy ${copyVisible ? 'is-visible' : 'is-hidden'}`} style={{ opacity: copyOpacity * (copyVisible ? 1 : 0) }}>
             <h3>{copyCard?.title ?? 'Campaign Tile'}</h3>
-            <p>{copyCard?.blurb ?? 'Clear hierarchy and narrative control across fast-turnaround campaign visuals.'}</p>
+            <p>{copyCard?.blurb ?? 'Campaign graphics for social media.'}</p>
           </div>
         </div>
       </div>
