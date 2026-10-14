@@ -1,0 +1,85 @@
+{
+  "title": "We Can’t Afford Labour",
+  "campaign_url": "https://www.wecantaffordlabour.nz/",
+  "description": "I made videos and thumbnails for the We Can’t Afford Labour campaign. The series combines editing and motion graphics in Premiere Pro and After Effects with AI tools used on some videos.",
+  "items": [
+    {
+      "id": "capital-gains-tax",
+      "title": "Capital gains tax",
+      "poster": "/media/cases/we-cant-afford-labour/capital-gains-tax.webp",
+      "alt": "We Can’t Afford Labour campaign thumbnail: capital gains tax.",
+      "video": "/media/cases/we-cant-afford-labour/capital-gains-tax.mp4",
+      "duration": "00:31",
+      "youtube_id": null
+    },
+    {
+      "id": "food-prices",
+      "title": "Food prices",
+      "poster": "/media/cases/we-cant-afford-labour/food-prices.webp",
+      "alt": "We Can’t Afford Labour campaign thumbnail: food prices.",
+      "video": "/media/cases/we-cant-afford-labour/food-prices.mp4",
+      "duration": "00:30",
+      "youtube_id": null
+    },
+    {
+      "id": "cost-of-living",
+      "title": "Cost of living",
+      "poster": "/media/cases/we-cant-afford-labour/cost-of-living.webp",
+      "alt": "We Can’t Afford Labour campaign thumbnail: cost of living."
+    },
+    {
+      "id": "crime",
+      "title": "Crime",
+      "poster": "/media/cases/we-cant-afford-labour/crime.webp",
+      "alt": "We Can’t Afford Labour campaign thumbnail: crime.",
+      "video": "/media/cases/we-cant-afford-labour/crime.mp4",
+      "duration": "00:30",
+      "youtube_id": null
+    },
+    {
+      "id": "kiwibuild",
+      "title": "KiwiBuild",
+      "poster": "/media/cases/we-cant-afford-labour/kiwibuild.webp",
+      "alt": "We Can’t Afford Labour campaign thumbnail: kiwibuild."
+    },
+    {
+      "id": "vaccines",
+      "title": "Vaccines",
+      "poster": "/media/cases/we-cant-afford-labour/vaccines.webp",
+      "alt": "We Can’t Afford Labour campaign thumbnail: vaccines."
+    },
+    {
+      "id": "education",
+      "title": "Education",
+      "poster": "/media/cases/we-cant-afford-labour/education.webp",
+      "alt": "We Can’t Afford Labour campaign thumbnail: education.",
+      "video": "/media/cases/we-cant-afford-labour/education.mp4",
+      "duration": "00:30",
+      "youtube_id": null
+    },
+    {
+      "id": "energy",
+      "title": "Energy",
+      "poster": "/media/cases/we-cant-afford-labour/energy.webp",
+      "alt": "We Can’t Afford Labour campaign thumbnail: energy."
+    },
+    {
+      "id": "health",
+      "title": "Health",
+      "poster": "/media/cases/we-cant-afford-labour/health.webp",
+      "alt": "We Can’t Afford Labour campaign thumbnail: health."
+    },
+    {
+      "id": "hospital",
+      "title": "Hospital",
+      "poster": "/media/cases/we-cant-afford-labour/hospital.webp",
+      "alt": "We Can’t Afford Labour campaign thumbnail: hospital."
+    },
+    {
+      "id": "supermarket",
+      "title": "Supermarket",
+      "poster": "/media/cases/we-cant-afford-labour/supermarket.webp",
+      "alt": "We Can’t Afford Labour campaign thumbnail: supermarket."
+    }
+  ]
+}

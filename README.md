@@ -16,6 +16,7 @@ npm run dev
 - `content/cases/*.md`
 - `content/reel.json`
 - `content/photography.json` (photo dimensions, captions, collections, and selected photos)
+- `content/wcal-campaign.json` (campaign videos, thumbnails, and optional YouTube IDs)
 
 ## Media workflow
 
@@ -32,3 +33,5 @@ npm run media:check
 - If `photography_url` is `null`, nav links to the separate photography page at `/photography`.
 - Portfolio photos are served as optimized WebP files in `public/media/photography/portfolio`.
 - The production site is the Cloudflare Pages project `portfolio`, published from the static `out/` export.
+- WCAL videos load on click. Set an item's `youtube_id` to its 11-character YouTube video ID to use an embed instead of its local file.
+- Existing video previews load near the viewport and pause when out of view or when the tab is hidden. Reduced-motion settings disable automatic playback.

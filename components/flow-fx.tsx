@@ -8,6 +8,8 @@ export function FlowFx() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
     const root = document.documentElement;
     const updateDotScroll = () => {
       root.style.setProperty('--dot-scroll', `${Math.round(window.scrollY * -0.08)}px`);
@@ -35,14 +37,12 @@ export function FlowFx() {
       const delayIndex = Number(node.style.getPropertyValue('--d') || '0');
       return gsap.fromTo(
         node,
-        { opacity: 0, y: 30, scale: 0.985, filter: 'blur(3px)' },
+        { opacity: 0, y: 20 },
         {
           opacity: 1,
           y: 0,
-          scale: 1,
-          filter: 'blur(0px)',
           delay: delayIndex * 0.1,
-          duration: 1.45,
+          duration: 0.7,
           ease: 'power2.out',
           scrollTrigger: {
             trigger: node,

@@ -3,13 +3,17 @@
 import Image from 'next/image';
 import { useMemo, useState } from 'react';
 import { MediaLightbox } from '@/components/media-lightbox';
-import type { CaseStudy } from '@/lib/types';
+import { CampaignVideoSection } from '@/components/campaign-video-section';
+import { ViewportVideo } from '@/components/viewport-video';
+import type { CaseStudy, VideoCampaign } from '@/lib/types';
 
 type Props = {
   cases: CaseStudy[];
+  campaign: VideoCampaign;
 };
 
-export function ExperienceSection({ cases }: Props) {
+export function ExperienceSection({ cases, campaign }: Props) {
+  const [playingEmbed, setPlayingEmbed] = useState<string | null>(null);
   const [activeImage, setActiveImage] = useState<{ src: string; alt: string } | null>(null);
   const shouldGlowMetric = (metric: string) => /(winner|finalist|reed|international|national|\d)/i.test(metric);
 
@@ -27,7 +31,7 @@ export function ExperienceSection({ cases }: Props) {
       <section id="cases" className="experience-section">
         <div className="experience-intro" data-reveal>
           <h2 className="section-title">experience</h2>
-          <p className="section-sub">Two campaigns I worked on at the Taxpayers' Union.</p>
+          <p className="section-sub">Campaign design, video, and print work.</p>
         </div>
 
         <div className="experience-track">
@@ -72,18 +76,22 @@ export function ExperienceSection({ cases }: Props) {
 
               <div className="experience-media-column">
                 <div className="experience-feature-media" data-reveal>
-                  {entry.video_embed_url ? (
+                  {entry.video_embed_url && playingEmbed === entry.slug ? (
                     <iframe
-                      src={entry.video_embed_url}
+                      src={`${entry.video_embed_url}?autoplay=1&rel=0`}
                       title={`${entry.title} video`}
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       referrerPolicy="strict-origin-when-cross-origin"
                       allowFullScreen
                     />
+                  ) : entry.video_embed_url ? (
+                    <button type="button" className="campaign-play-button" onClick={() => setPlayingEmbed(entry.slug)}
+                      aria-label={`Play ${entry.title}`}>
+                      <Image src={entry.cover_image} alt={`${entry.title} video poster`} width={1440} height={810} />
+                      <span className="campaign-play-label"><span aria-hidden="true">▶</span> Play video</span>
+                    </button>
                   ) : entry.video ? (
-                    <video autoPlay loop muted playsInline preload="metadata" poster={entry.video_poster} controls>
-                      <source src={entry.video} type="video/mp4" />
-                    </video>
+                    <ViewportVideo src={entry.video} autoPlay loop muted playsInline poster={entry.video_poster} controls />
                   ) : (
                     <button
                       type="button"
@@ -112,6 +120,7 @@ export function ExperienceSection({ cases }: Props) {
               </div>
             </article>
           ))}
+          <CampaignVideoSection campaign={campaign} />
         </div>
       </section>
 

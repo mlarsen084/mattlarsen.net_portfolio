@@ -116,6 +116,30 @@ def main() -> None:
             ensure(type(value) is int and value > 0, f'photo {ref}: {key} must be positive', errors)
         ensure(type(photo.get('featured')) is bool, f'photo {ref}: featured must be boolean', errors)
 
+    campaign = load_json(CONTENT / 'wcal-campaign.json')
+    for key in ['title', 'campaign_url', 'description', 'items']:
+        ensure(key in campaign, f'video campaign missing key: {key}', errors)
+    campaign_items = campaign.get('items', [])
+    ensure(isinstance(campaign_items, list) and len(campaign_items) > 0, 'video campaign needs media', errors)
+    campaign_ids: set[str] = set()
+    for item in campaign_items:
+        for key in ['id', 'title', 'poster', 'alt']:
+            ensure(key in item, f'campaign media missing key: {key}', errors)
+        item_id = item.get('id', '')
+        ensure(item_id not in campaign_ids, f'duplicate campaign media: {item_id}', errors)
+        campaign_ids.add(item_id)
+        for key in ['poster', 'video']:
+            ref = item.get(key)
+            if isinstance(ref, str) and ref.startswith('/'):
+                path = resolve_public_path(ref)
+                ensure(path.is_file(), f'missing campaign {key}: {ref}', errors)
+                if key == 'video' and path.is_file():
+                    ensure(path.stat().st_size < 25 * 1024 * 1024, f'campaign video exceeds hosting limit: {ref}', errors)
+        youtube_id = item.get('youtube_id')
+        if youtube_id:
+            ensure(isinstance(youtube_id, str) and len(youtube_id) == 11 and all(c.isalnum() or c in '-_' for c in youtube_id),
+                   f'invalid campaign YouTube ID: {youtube_id}', errors)
+
     wall = load_json(CONTENT / 'wall-items.json')
     ensure(isinstance(wall, list), 'wall-items.json must be an array', errors)
     ensure(len(wall) == 30, f'wall-items count must be 30, found {len(wall)}', errors)

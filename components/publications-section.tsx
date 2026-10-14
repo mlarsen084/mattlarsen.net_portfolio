@@ -1,4 +1,5 @@
 import styles from './publications-section.module.css';
+import { ViewportVideo } from '@/components/viewport-video';
 
 const publications = [
   {
@@ -46,19 +47,16 @@ export function PublicationsSection() {
         {publications.map((project, index) => (
           <article key={project.slug} className={styles.project}>
             <figure className={styles.videoBlock}>
-              <video
+              <ViewportVideo
+                src={`/media/publications/${project.slug}.mp4`}
                 className={styles.video}
                 autoPlay
                 muted
                 loop
                 playsInline
-                preload="metadata"
                 poster={`/media/publications/${project.slug}-poster.jpg`}
                 aria-label={`${project.title} — 3D publication video`}
-              >
-                <source src={`/media/publications/${project.slug}.mp4`} type="video/mp4" />
-                <a href={`/media/publications/${project.slug}.mp4`}>Watch the {project.title} video</a>
-              </video>
+              />
               <figcaption>Blender render · {project.duration}</figcaption>
             </figure>
 

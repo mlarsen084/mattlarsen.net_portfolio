@@ -65,3 +65,20 @@ export type ReelItem = {
   has_audio?: boolean;
   aspect_ratio?: string;
 };
+
+export type CampaignMediaItem = {
+  id: string;
+  title: string;
+  poster: string;
+  alt: string;
+  video?: string;
+  duration?: string;
+  youtube_id?: string | null;
+};
+
+export type VideoCampaign = {
+  title: string;
+  campaign_url: string;
+  description: string;
+  items: CampaignMediaItem[];
+};

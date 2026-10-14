@@ -10,7 +10,8 @@ import { PublicationsSection } from '@/components/publications-section';
 import { SelectedWorkGrid } from '@/components/selected-work-grid';
 import { SiteNav } from '@/components/site-nav';
 import { WallSection } from '@/components/wall-section';
-import { getCases, getReelItems, getSiteConfig, getWallItems } from '@/lib/content';
+import { ViewportVideo } from '@/components/viewport-video';
+import { getCases, getReelItems, getSiteConfig, getVideoCampaign, getWallItems } from '@/lib/content';
 
 const metrics = [
   {
@@ -62,6 +63,7 @@ export default function HomePage() {
   const wallItems = getWallItems();
   const cases = getCases().filter((entry) => entry.featured).slice(0, 4);
   const reel = getReelItems();
+  const campaign = getVideoCampaign();
   const hasPhotographyExternal = Boolean(site.photography_url);
 
   return (
@@ -93,18 +95,16 @@ export default function HomePage() {
           </div>
 
           <div className={`hero-media-slot hero-mobile-${site.hero_video_mobile_mode}`}>
-            <video
+            <ViewportVideo
+              src={site.hero_video_url}
               className="hero-video"
               autoPlay
               loop
               muted
               playsInline
-              preload="metadata"
               controls={false}
               poster={site.hero_video_poster_url}
-            >
-              <source src={site.hero_video_url} type="video/mp4" />
-            </video>
+            />
             <Image
               className="hero-poster"
               src={site.hero_video_poster_url}
@@ -125,7 +125,7 @@ export default function HomePage() {
 
       <PublicationsSection />
 
-      <ExperienceSection cases={cases} />
+      <ExperienceSection cases={cases} campaign={campaign} />
 
       <section className="profile-section">
         <h2 className="section-title" data-reveal>

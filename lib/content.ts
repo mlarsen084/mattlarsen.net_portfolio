@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { CaseStudy, PhotoItem, ReelItem, SiteConfig, WallItem } from '@/lib/types';
+import { CaseStudy, PhotoItem, ReelItem, SiteConfig, VideoCampaign, WallItem } from '@/lib/types';
 
 const ROOT = process.cwd();
 
@@ -73,6 +73,10 @@ export function getReelItems(): ReelItem[] {
 
 export function getPhotographyItems(): PhotoItem[] {
   return readJson<PhotoItem[]>('content/photography.json');
+}
+
+export function getVideoCampaign(): VideoCampaign {
+  return readJson<VideoCampaign>('content/wcal-campaign.json');
 }
 
 export function getCases(): CaseStudy[] {

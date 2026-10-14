@@ -1,6 +1,7 @@
 'use client';
 
 import { GlowWord } from '@/components/glow-word';
+import { ViewportVideo } from '@/components/viewport-video';
 
 type Props = {
   video: string;
@@ -42,18 +43,14 @@ export function ReedAwardsSection({ video, videoPoster }: Props) {
           </p>
           <div className="reed-media-column">
             <figure className="reed-media-card">
-              <video className="reed-award-video" autoPlay loop muted playsInline preload="metadata" poster={videoPoster}>
-                <source src={video} type="video/mp4" />
-              </video>
+              <ViewportVideo src={video} className="reed-award-video" autoPlay loop muted playsInline poster={videoPoster} />
               <figcaption className="reed-media-caption">
                 <strong>Best International Online Video (National)</strong>
                 <span>Nicola&apos;s Fudge film.</span>
               </figcaption>
             </figure>
             <figure className="reed-media-card is-second">
-              <video className="reed-award-video" autoPlay loop muted playsInline preload="metadata" poster={videoPoster}>
-                <source src={video} type="video/mp4" />
-              </video>
+              <ViewportVideo src={video} className="reed-award-video" autoPlay loop muted playsInline poster={videoPoster} />
               <figcaption className="reed-media-caption">
                 <strong>Best International Campaign (National)</strong>
                 <span>Nicola&apos;s Fudge campaign.</span>

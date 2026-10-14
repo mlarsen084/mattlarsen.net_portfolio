@@ -3,6 +3,7 @@
 import type { CSSProperties } from 'react';
 import { useEffect, useRef, useState } from 'react';
 import type { ReelItem } from '@/lib/types';
+import { ViewportVideo } from '@/components/viewport-video';
 
 type Props = {
   items: ReelItem[];
@@ -50,7 +51,8 @@ export function ReelLibrary({ items }: Props) {
         return (
           <article key={item.id} data-reveal style={{ ['--d' as string]: idx } as CSSProperties}>
             <div className="reel-media reel-media-fixed">
-              <video
+              <ViewportVideo
+                src={item.video}
                 ref={(node) => {
                   videoRefs.current[item.id] = node;
                 }}
@@ -58,11 +60,8 @@ export function ReelLibrary({ items }: Props) {
                 loop
                 muted={!audioActive}
                 playsInline
-                preload="metadata"
                 poster={item.poster}
-                >
-                <source src={item.video} type="video/mp4" />
-              </video>
+              />
               {hasAudio ? (
                 <button
                   type="button"
