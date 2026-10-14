@@ -7,7 +7,7 @@ const site = getSiteConfig();
 const siteUrl = new URL(site.site_url);
 const title = `${site.name} | Graphic Designer`;
 const description =
-  'Campaign and visual communication designer across social, motion, and print. Selected work, motion cutdowns, campaign systems, and Reed Award-winning creative by Matthew Larsen.';
+  'Campaign and visual communication designer across social, motion, and print. Selected design, photography, and Reed Award-winning creative by Matthew Larsen.';
 const ogImage = '/og/matthew-larsen-portfolio-og.svg';
 
 export const metadata: Metadata = {
@@ -24,6 +24,7 @@ export const metadata: Metadata = {
     'Political Campaign Design',
     'Reed Awards',
     'Portfolio',
+    'Photography',
   ],
   authors: [{ name: site.name, url: site.site_url }],
   creator: site.name,
@@ -85,6 +86,7 @@ const personJsonLd = {
     'Social media creative',
     'Print design',
     'Visual communication',
+    'Photography',
   ],
 };
 

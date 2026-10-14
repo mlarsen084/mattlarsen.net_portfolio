@@ -15,10 +15,9 @@ export function SiteNav({ config }: Props) {
         ML
       </Link>
       <nav>
-        <a href="#rocket-lab">rocket lab</a>
+        <a href="#wall">wall</a>
         <a href="#publications">print &amp; motion</a>
         <a href="#cases">experience</a>
-        <a href="#wall">wall</a>
         <a href="#reel">reel</a>
         <a href="#awards">awards</a>
         <a href="#contact">contact</a>
@@ -27,7 +26,7 @@ export function SiteNav({ config }: Props) {
             photography
           </a>
         ) : (
-          <Link href={photographyHref}>photography</Link>
+          <a href="#photography">photography</a>
         )}
       </nav>
     </header>

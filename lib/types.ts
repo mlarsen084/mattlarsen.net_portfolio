@@ -21,6 +21,18 @@ export type WallItem = {
   focus_order?: number;
 };
 
+export type PhotoItem = {
+  src: string;
+  alt: string;
+  title: string;
+  detail: string;
+  width: number;
+  height: number;
+  collection: string;
+  featured: boolean;
+  wide?: boolean;
+};
+
 export type CaseStudy = {
   title: string;
   slug: string;

@@ -5,16 +5,7 @@ import Link from 'next/link';
 import type { CSSProperties } from 'react';
 import { useState } from 'react';
 import { MediaLightbox } from '@/components/media-lightbox';
-
-type PhotoItem = {
-  src: string;
-  alt: string;
-  title: string;
-  detail: string;
-  width: number;
-  height: number;
-  wide?: boolean;
-};
+import type { PhotoItem } from '@/lib/types';
 
 type PhotoCollection = {
   title: string;
@@ -41,14 +32,10 @@ export function PhotographyPageView({ email, linkedin, photos, collections }: Pr
       <section className="photo-about-section photo-about-section--compact">
         <div className="photo-about-copy" data-reveal>
           <p className="photo-kicker">Photography</p>
-          <h1 className="section-title">photography in progress</h1>
+          <h1 className="section-title">photography</h1>
           <p className="photo-about-text">
-            A growing edit across public affairs, events, documentary coverage, portraits, and community work. The
-            point of this page is to show range alongside the design portfolio, not just one narrow photography lane.
-          </p>
-          <p className="photo-about-text">
-            It is still intentionally selective for now, but these collections already show how I work across people,
-            atmosphere, movement, live moments, and cleaner portrait-led frames.
+            People, places, and live moments. A selection of my photography across public affairs, events,
+            campaigns, portraits, and landscapes.
           </p>
           <div className="photo-about-links">
             <Link href="/">Back to design portfolio</Link>
@@ -63,9 +50,9 @@ export function PhotographyPageView({ email, linkedin, photos, collections }: Pr
       <section className="photo-gallery-section">
         <div className="photo-gallery-intro" data-reveal>
           <p className="photo-kicker">Selected frames</p>
-          <h2 className="section-title">core photography edit</h2>
+          <h2 className="section-title">selected frames</h2>
           <p className="section-sub">
-            A tighter first pass across atmosphere, event coverage, detail, and documentary observation.
+            A first look across atmosphere, people, and documentary observation.
           </p>
         </div>
 
@@ -77,7 +64,7 @@ export function PhotographyPageView({ email, linkedin, photos, collections }: Pr
               data-reveal
               style={{ ['--d' as string]: idx } as CSSProperties}
             >
-              <button type="button" className="photo-gallery-frame zoomable-media" onClick={() => openLightbox(item)}>
+              <button type="button" className="photo-gallery-frame zoomable-media" aria-label={`Enlarge ${item.title}`} onClick={() => openLightbox(item)}>
                 <Image src={item.src} alt={item.alt} width={item.width} height={item.height} />
                 <span className="zoom-label">Zoom</span>
               </button>
@@ -89,19 +76,14 @@ export function PhotographyPageView({ email, linkedin, photos, collections }: Pr
           ))}
         </div>
 
-        <p className="photo-gallery-note" data-reveal>
-          This page is still developing, but the strongest frames stay up front while the wider archive continues to
-          grow.
-        </p>
       </section>
 
       <section className="photo-collections-section">
         <div className="photo-gallery-intro" data-reveal>
           <p className="photo-kicker">Collections</p>
-          <h2 className="section-title">range across different kinds of work</h2>
+          <h2 className="section-title">more from the portfolio</h2>
           <p className="section-sub">
-            These grouped sets are here to show breadth: political action, documentary moments, community coverage,
-            and people-focused frames.
+            From crowds and conversations to campaign details and the city around them.
           </p>
         </div>
 
@@ -120,6 +102,7 @@ export function PhotographyPageView({ email, linkedin, photos, collections }: Pr
                     <button
                       type="button"
                       className="photo-collection-frame zoomable-media"
+                      aria-label={`Enlarge ${item.title}`}
                       onClick={() => openLightbox(item)}
                     >
                       <Image src={item.src} alt={item.alt} width={item.width} height={item.height} />

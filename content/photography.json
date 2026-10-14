@@ -1,0 +1,222 @@
+[
+  {
+    "src": "/media/photography/portfolio/river-landscape.webp",
+    "alt": "A tree beside a winding river with green hills in the distance.",
+    "title": "River landscape",
+    "detail": "Landscape and place",
+    "width": 2048,
+    "height": 1365,
+    "collection": "Landscape and place",
+    "featured": true,
+    "wide": false
+  },
+  {
+    "src": "/media/photography/portfolio/protest-crowd.webp",
+    "alt": "A protest crowd on Parliament steps, framed by flags and handmade signs.",
+    "title": "Crowd at Parliament",
+    "detail": "Public affairs and protest",
+    "width": 2048,
+    "height": 1365,
+    "collection": "Public affairs and protest",
+    "featured": true,
+    "wide": false
+  },
+  {
+    "src": "/media/photography/portfolio/event-panel.webp",
+    "alt": "A group of panellists seated together behind microphones at an indoor event.",
+    "title": "The panel",
+    "detail": "Events and people",
+    "width": 2400,
+    "height": 1101,
+    "collection": "Events and people",
+    "featured": true,
+    "wide": true
+  },
+  {
+    "src": "/media/photography/portfolio/on-camera-interview.webp",
+    "alt": "A speaker being interviewed on a Wellington street beside a television camera.",
+    "title": "On camera",
+    "detail": "Campaigns in the street",
+    "width": 2048,
+    "height": 1365,
+    "collection": "Campaigns in the street",
+    "featured": true,
+    "wide": false
+  },
+  {
+    "src": "/media/photography/portfolio/event-portrait.webp",
+    "alt": "A man holding a drink at an indoor event, with the crowd behind him.",
+    "title": "A pause in the room",
+    "detail": "Events and people",
+    "width": 2400,
+    "height": 1600,
+    "collection": "Events and people",
+    "featured": true,
+    "wide": false
+  },
+  {
+    "src": "/media/photography/portfolio/whitmore-street.webp",
+    "alt": "A campaign billboard above a Wellington street with cars and buildings below.",
+    "title": "Whitmore Street",
+    "detail": "Landscape and place",
+    "width": 2048,
+    "height": 1365,
+    "collection": "Landscape and place",
+    "featured": true,
+    "wide": false
+  },
+  {
+    "src": "/media/photography/portfolio/billboard-study.webp",
+    "alt": "A vertical view of a billboard mounted on a city building under a grey sky.",
+    "title": "A message above the city",
+    "detail": "Landscape and place",
+    "width": 1515,
+    "height": 2048,
+    "collection": "Landscape and place",
+    "featured": false,
+    "wide": false
+  },
+  {
+    "src": "/media/photography/portfolio/outdoor-speaker-wide.webp",
+    "alt": "An outdoor speaker holding a microphone above a crowd near Parliament.",
+    "title": "The speaker and the crowd",
+    "detail": "Public affairs and protest",
+    "width": 2048,
+    "height": 1365,
+    "collection": "Public affairs and protest",
+    "featured": false,
+    "wide": false
+  },
+  {
+    "src": "/media/photography/portfolio/outdoor-speaker-portrait.webp",
+    "alt": "A close view of an outdoor speaker holding a microphone beneath green trees.",
+    "title": "At the microphone",
+    "detail": "Public affairs and protest",
+    "width": 2048,
+    "height": 1365,
+    "collection": "Public affairs and protest",
+    "featured": false,
+    "wide": false
+  },
+  {
+    "src": "/media/photography/portfolio/parliament-flags.webp",
+    "alt": "An orange union flag outside the Beehive in Wellington.",
+    "title": "Flags at Parliament",
+    "detail": "Public affairs and protest",
+    "width": 2048,
+    "height": 1365,
+    "collection": "Public affairs and protest",
+    "featured": false,
+    "wide": false
+  },
+  {
+    "src": "/media/photography/portfolio/crowd-and-flags.webp",
+    "alt": "A view through red and orange union flags towards a protest crowd.",
+    "title": "Among the flags",
+    "detail": "Public affairs and protest",
+    "width": 2048,
+    "height": 1365,
+    "collection": "Public affairs and protest",
+    "featured": false,
+    "wide": false
+  },
+  {
+    "src": "/media/photography/portfolio/press-interview.webp",
+    "alt": "A woman being interviewed outdoors beside a television camera.",
+    "title": "Talking to the press",
+    "detail": "Public affairs and protest",
+    "width": 2048,
+    "height": 1365,
+    "collection": "Public affairs and protest",
+    "featured": false,
+    "wide": false
+  },
+  {
+    "src": "/media/photography/portfolio/wheelspin-campaign.webp",
+    "alt": "A suited campaigner beside a pig mascot and a colourful wheel outside a justice centre.",
+    "title": "Campaign in action",
+    "detail": "Campaigns in the street",
+    "width": 2048,
+    "height": 1365,
+    "collection": "Campaigns in the street",
+    "featured": false,
+    "wide": false
+  },
+  {
+    "src": "/media/photography/portfolio/campaign-truck-detail.webp",
+    "alt": "A close view of CAP RATES NOW campaign graphics on the side of a truck.",
+    "title": "Campaign graphics on the move",
+    "detail": "Campaigns in the street",
+    "width": 2400,
+    "height": 1920,
+    "collection": "Campaigns in the street",
+    "featured": false,
+    "wide": false
+  },
+  {
+    "src": "/media/photography/portfolio/campaign-gathering.webp",
+    "alt": "A crowd gathered beside a truck carrying CAP RATES NOW campaign graphics.",
+    "title": "Gathering around the message",
+    "detail": "Campaigns in the street",
+    "width": 2400,
+    "height": 1350,
+    "collection": "Campaigns in the street",
+    "featured": false,
+    "wide": false
+  },
+  {
+    "src": "/media/photography/portfolio/truck-speech.webp",
+    "alt": "A speaker with a microphone beside a campaign truck, framed by the audience.",
+    "title": "A street-side speech",
+    "detail": "Campaigns in the street",
+    "width": 2400,
+    "height": 1600,
+    "collection": "Campaigns in the street",
+    "featured": false,
+    "wide": false
+  },
+  {
+    "src": "/media/photography/portfolio/event-sign-detail.webp",
+    "alt": "A chalkboard event sign photographed with warm, shallow-focus light.",
+    "title": "At the door",
+    "detail": "Events and people",
+    "width": 2400,
+    "height": 1600,
+    "collection": "Events and people",
+    "featured": false,
+    "wide": false
+  },
+  {
+    "src": "/media/photography/portfolio/event-production.webp",
+    "alt": "A laptop in the foreground with panellists and microphones beyond it.",
+    "title": "Behind the event",
+    "detail": "Events and people",
+    "width": 2400,
+    "height": 1600,
+    "collection": "Events and people",
+    "featured": false,
+    "wide": false
+  },
+  {
+    "src": "/media/photography/portfolio/event-audience.webp",
+    "alt": "An audience seated in a warmly lit indoor venue.",
+    "title": "Listening in",
+    "detail": "Events and people",
+    "width": 2400,
+    "height": 1600,
+    "collection": "Events and people",
+    "featured": false,
+    "wide": false
+  },
+  {
+    "src": "/media/photography/portfolio/lounge-discussion.webp",
+    "alt": "A small group listening to a speaker in a lounge overlooking trees.",
+    "title": "In conversation",
+    "detail": "Events and people",
+    "width": 2048,
+    "height": 1365,
+    "collection": "Events and people",
+    "featured": false,
+    "wide": false
+  }
+]

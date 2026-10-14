@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { CaseStudy, ReelItem, SiteConfig, WallItem } from '@/lib/types';
+import { CaseStudy, PhotoItem, ReelItem, SiteConfig, WallItem } from '@/lib/types';
 
 const ROOT = process.cwd();
 
@@ -69,6 +69,10 @@ export function getWallItems(): WallItem[] {
 
 export function getReelItems(): ReelItem[] {
   return readJson<ReelItem[]>('content/reel.json');
+}
+
+export function getPhotographyItems(): PhotoItem[] {
+  return readJson<PhotoItem[]>('content/photography.json');
 }
 
 export function getCases(): CaseStudy[] {

@@ -6,12 +6,12 @@ import { FlowFx } from '@/components/flow-fx';
 import { GlowWord } from '@/components/glow-word';
 import { ReedAwardsSection } from '@/components/reed-awards-section';
 import { ReelLibrary } from '@/components/reel-library';
-import { RocketLabSection } from '@/components/rocket-lab-section';
+import { PhotographySection } from '@/components/photography-section';
 import { PublicationsSection } from '@/components/publications-section';
 import { SelectedWorkGrid } from '@/components/selected-work-grid';
 import { SiteNav } from '@/components/site-nav';
 import { WallSection } from '@/components/wall-section';
-import { getCases, getReelItems, getSiteConfig, getWallItems } from '@/lib/content';
+import { getCases, getPhotographyItems, getReelItems, getSiteConfig, getWallItems } from '@/lib/content';
 
 const metrics = [
   {
@@ -63,13 +63,13 @@ export default function HomePage() {
   const wallItems = getWallItems();
   const cases = getCases().filter((entry) => entry.featured).slice(0, 4);
   const reel = getReelItems();
+  const photos = getPhotographyItems().filter((photo) => photo.featured);
   const hasPhotographyExternal = Boolean(site.photography_url);
 
   return (
     <main>
       <FlowFx />
       <SiteNav config={site} />
-      <RocketLabSection />
 
       <section className="cv-hero" id="top">
         <div className="hero-layout">
@@ -117,17 +117,17 @@ export default function HomePage() {
             />
           </div>
         </div>
-        <a className="hero-scroll-cue" href="#publications">
+        <a className="hero-scroll-cue" href="#wall">
           <span className="hero-scroll-label">Scroll Down</span>
           <span className="hero-scroll-sub">Selected work starts below</span>
         </a>
       </section>
 
+      <WallSection items={wallItems} />
+
       <PublicationsSection />
 
       <ExperienceSection cases={cases} />
-
-      <WallSection items={wallItems} />
 
       <section className="profile-section">
         <h2 className="section-title" data-reveal>
@@ -160,6 +160,8 @@ export default function HomePage() {
         <p className="section-sub">Selected motion work across campaign ads, explainers, and fast-turnaround cutdowns.</p>
         <ReelLibrary items={reel} />
       </section>
+
+      <PhotographySection photos={photos} />
 
       <section className="skills-section">
         <h2 className="section-title">tools &amp; skills</h2>
@@ -203,7 +205,7 @@ export default function HomePage() {
               Photography
             </a>
           ) : (
-            <Link href="/photography">Photography (Coming Soon)</Link>
+            <Link href="/photography">Photography</Link>
           )}
         </div>
       </section>

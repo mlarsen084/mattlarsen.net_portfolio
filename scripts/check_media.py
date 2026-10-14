@@ -99,6 +99,23 @@ def main() -> None:
         errors,
     )
 
+    photos = load_json(CONTENT / 'photography.json')
+    ensure(isinstance(photos, list) and len(photos) > 0, 'photography.json must contain photos', errors)
+    photo_sources: set[str] = set()
+    for photo in photos:
+        for key in ['src', 'alt', 'title', 'detail', 'width', 'height', 'collection', 'featured']:
+            ensure(key in photo, f'photo missing key: {key}', errors)
+        ref = photo.get('src', '')
+        ensure(isinstance(ref, str) and ref.startswith('/media/photography/'), f'invalid photo path: {ref}', errors)
+        if isinstance(ref, str):
+            ensure(resolve_public_path(ref).is_file(), f'missing photo: {ref}', errors)
+            ensure(ref not in photo_sources, f'duplicate photo: {ref}', errors)
+            photo_sources.add(ref)
+        for key in ['width', 'height']:
+            value = photo.get(key)
+            ensure(type(value) is int and value > 0, f'photo {ref}: {key} must be positive', errors)
+        ensure(type(photo.get('featured')) is bool, f'photo {ref}: featured must be boolean', errors)
+
     wall = load_json(CONTENT / 'wall-items.json')
     ensure(isinstance(wall, list), 'wall-items.json must be an array', errors)
     ensure(len(wall) == 30, f'wall-items count must be 30, found {len(wall)}', errors)
