@@ -123,8 +123,6 @@ export default function HomePage() {
 
       <WallSection items={wallItems} />
 
-      <PublicationsSection />
-
       <ExperienceSection cases={cases} campaign={campaign} />
 
       <section className="profile-section">
@@ -158,6 +156,8 @@ export default function HomePage() {
         <p className="section-sub">Campaign videos, ads, and explainers.</p>
         <ReelLibrary items={reel} />
       </section>
+
+      <PublicationsSection />
 
       <section className="skills-section">
         <h2 className="section-title">tools &amp; skills</h2>

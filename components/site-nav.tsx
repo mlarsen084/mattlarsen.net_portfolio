@@ -16,9 +16,9 @@ export function SiteNav({ config }: Props) {
       </Link>
       <nav>
         <a href="#wall">wall</a>
-        <a href="#publications">print &amp; motion</a>
-        <a href="#cases">experience</a>
+        <a href="#cases">noteworthy campaigns</a>
         <a href="#reel">reel</a>
+        <a href="#publications">print &amp; motion</a>
         <a href="#awards">awards</a>
         <a href="#contact">contact</a>
         {photographyExternal ? (
