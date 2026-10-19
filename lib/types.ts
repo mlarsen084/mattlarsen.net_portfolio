@@ -93,6 +93,8 @@ export type MediaReaction = {
   video?: string;
   poster?: string;
   facebook_url?: string;
+  youtube_id?: string;
+  context?: string;
   quote?: string;
   excerpt?: string;
   summary: string;

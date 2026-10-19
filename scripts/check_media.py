@@ -148,7 +148,11 @@ def main() -> None:
         reaction_id = reaction.get('id', '')
         ensure(reaction_id not in reaction_ids, f'duplicate reaction: {reaction_id}', errors)
         reaction_ids.add(reaction_id)
-        ensure(bool(reaction.get('video') or reaction.get('facebook_url')), f'reaction has no video: {reaction_id}', errors)
+        ensure(bool(reaction.get('video') or reaction.get('facebook_url') or reaction.get('youtube_id')), f'reaction has no video: {reaction_id}', errors)
+        youtube_id = reaction.get('youtube_id')
+        if youtube_id:
+            ensure(isinstance(youtube_id, str) and len(youtube_id) == 11 and all(c.isalnum() or c in '-_' for c in youtube_id),
+                   f'invalid reaction YouTube ID: {youtube_id}', errors)
         for key in ['video', 'poster', 'captions_url', 'transcript_url']:
             ref = reaction.get(key)
             if isinstance(ref, str) and ref.startswith('/'):

@@ -711,7 +711,7 @@ main > * {
   background: rgba(8, 10, 13, 0.7);
 }
 
-.media-reaction-card--facebook {
+.media-reaction-card--external {
   grid-column: 1 / -1;
 }
 
@@ -741,13 +741,25 @@ main > * {
   aspect-ratio: auto;
 }
 
+.media-reaction-player--youtube {
+  aspect-ratio: 16 / 9;
+}
+
+.media-reaction-player--youtube .external-reaction-placeholder {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .media-reaction-player--facebook.is-playing {
   aspect-ratio: 9 / 16;
   max-width: 320px;
   margin: 0 auto;
 }
 
-.facebook-reaction-placeholder {
+.external-reaction-placeholder {
   display: block;
   min-height: 190px;
   padding: 2.5rem 1rem;
@@ -756,9 +768,19 @@ main > * {
   background: linear-gradient(125deg, #142538, #0b1018);
 }
 
-.facebook-reaction-placeholder span {
+.external-reaction-placeholder span {
   color: #b4bdca;
   font-size: 0.9rem;
+}
+
+.media-reaction-copy .media-reaction-context {
+  display: inline-block;
+  margin-bottom: 0.3rem;
+  padding: 0.3rem 0.55rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 5px;
+  color: #d2d9e4;
+  font-size: 0.78rem;
 }
 
 .media-reaction-copy {

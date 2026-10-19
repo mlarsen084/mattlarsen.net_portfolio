@@ -25,14 +25,23 @@ export function CampaignMediaReactions({ reactions, playingId, onPlay, activePla
           const key = `reaction-${reaction.id}`;
           const playing = playingId === key;
           const facebook = Boolean(reaction.facebook_url);
+          const youtube = Boolean(reaction.youtube_id);
           return (
-            <article key={reaction.id} className={`media-reaction-card${facebook ? ' media-reaction-card--facebook' : ''}`}>
+            <article key={reaction.id} className={`media-reaction-card${facebook || youtube ? ' media-reaction-card--external' : ''}`}>
               <div
-                className={`media-reaction-player${facebook ? ' media-reaction-player--facebook' : ''}${playing ? ' is-playing' : ''}`}
+                className={`media-reaction-player${facebook ? ' media-reaction-player--facebook' : ''}${youtube ? ' media-reaction-player--youtube' : ''}${playing ? ' is-playing' : ''}`}
                 ref={playing ? activePlayerRef : undefined}
               >
                 {playing ? (
-                  facebook ? (
+                  youtube ? (
+                    <iframe
+                      src={`https://www.youtube-nocookie.com/embed/${reaction.youtube_id}?autoplay=1&rel=0`}
+                      title={reaction.title}
+                      allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    />
+                  ) : facebook ? (
                     <iframe
                       src={`https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(reaction.facebook_url!)}&show_text=false&autoplay=true`}
                       title={reaction.title}
@@ -52,20 +61,21 @@ export function CampaignMediaReactions({ reactions, playingId, onPlay, activePla
                     {reaction.poster ? (
                       <Image src={reaction.poster} alt={`${reaction.title} — ${reaction.outlet}`} width={900} height={900} />
                     ) : (
-                      <span className="facebook-reaction-placeholder">Herald NOW<br /><span>Facebook reel · {reaction.duration}</span></span>
+                      <span className="external-reaction-placeholder">{youtube ? 'Three News / Stuff' : 'Herald NOW'}<br /><span>{youtube ? 'YouTube' : 'Facebook reel'} · {reaction.duration}</span></span>
                     )}
-                    <span className="campaign-play-label"><span aria-hidden="true">▶</span> {facebook ? 'Load Facebook video' : 'Play reaction'}</span>
+                    <span className="campaign-play-label"><span aria-hidden="true">▶</span> {youtube ? 'Load YouTube report' : facebook ? 'Load Facebook video' : 'Play reaction'}</span>
                   </button>
                 )}
               </div>
               <div className="media-reaction-copy">
                 <p className="media-reaction-source">{reaction.outlet}{reaction.date ? ` · ${reaction.date}` : ''}</p>
+                {reaction.context ? <p className="media-reaction-context">{reaction.context}</p> : null}
                 <h5>{reaction.title}</h5>
                 {reaction.quote ? <blockquote>“{reaction.quote}”</blockquote> : null}
                 <p>{reaction.summary}</p>
                 {reaction.excerpt ? <><p className="media-reaction-source">Short excerpt</p><blockquote>{reaction.excerpt}</blockquote></> : null}
                 <div className="media-reaction-links">
-                  <a href={reaction.source_url} target="_blank" rel="noreferrer">{facebook ? 'Watch on Facebook ↗' : 'Original broadcast ↗'}</a>
+                  <a href={reaction.source_url} target="_blank" rel="noreferrer">{youtube ? 'Watch full report on YouTube ↗' : facebook ? 'Watch on Facebook ↗' : 'Original broadcast ↗'}</a>
                   {reaction.transcript_url ? <a href={reaction.transcript_url} download>Download transcript</a> : null}
                 </div>
                 {reaction.segments ? (
