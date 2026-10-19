@@ -1,8 +1,9 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import { Fragment, useEffect, useRef, useState } from 'react';
 import { MediaLightbox } from '@/components/media-lightbox';
+import { CampaignMediaReactions } from '@/components/campaign-media-reactions';
 import type { VideoCampaign } from '@/lib/types';
 
 export function CampaignVideoSection({ campaign }: { campaign: VideoCampaign }) {
@@ -50,7 +51,8 @@ export function CampaignVideoSection({ campaign }: { campaign: VideoCampaign }) 
       <div className="experience-media-column">
         <div className="campaign-video-grid">
           {videos.map((item) => (
-            <figure className="campaign-video-card" key={item.id}>
+            <Fragment key={item.id}>
+            <figure id={`wcal-ad-${item.id}`} className={`campaign-video-card${item.id === 'capital-gains-tax' ? ' campaign-video-card--featured' : ''}`}>
               <div className="campaign-video-player" ref={playingId === item.id ? activePlayerRef : undefined}>
                 {playingId === item.id ? (
                   item.youtube_id ? (
@@ -75,6 +77,11 @@ export function CampaignVideoSection({ campaign }: { campaign: VideoCampaign }) 
               </div>
               <figcaption><strong>{item.title}</strong><span>{item.duration}</span></figcaption>
             </figure>
+            {item.id === 'capital-gains-tax' ? (
+              <CampaignMediaReactions reactions={campaign.reactions} playingId={playingId} onPlay={setPlayingId}
+                activePlayerRef={activePlayerRef} />
+            ) : null}
+            </Fragment>
           ))}
         </div>
         <div className="campaign-thumbnails">

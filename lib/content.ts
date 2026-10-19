@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { CaseStudy, PhotoItem, ReelItem, SiteConfig, VideoCampaign, WallItem } from '@/lib/types';
+import { CaseStudy, MediaReaction, PhotoItem, ReelItem, SiteConfig, VideoCampaign, WallItem } from '@/lib/types';
 
 const ROOT = process.cwd();
 
@@ -76,7 +76,10 @@ export function getPhotographyItems(): PhotoItem[] {
 }
 
 export function getVideoCampaign(): VideoCampaign {
-  return readJson<VideoCampaign>('content/wcal-campaign.json');
+  return {
+    ...readJson<Omit<VideoCampaign, 'reactions'>>('content/wcal-campaign.json'),
+    reactions: readJson<MediaReaction[]>('content/wcal-media-reactions.json'),
+  };
 }
 
 export function getCases(): CaseStudy[] {

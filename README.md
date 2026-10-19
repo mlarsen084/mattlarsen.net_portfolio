@@ -17,6 +17,7 @@ npm run dev
 - `content/reel.json`
 - `content/photography.json` (photo dimensions, captions, collections, and selected photos)
 - `content/wcal-campaign.json` (campaign videos, thumbnails, and optional YouTube IDs)
+- `content/wcal-media-reactions.json` (attributed reaction clips and timed transcripts below the capital gains tax ad)
 
 ## Media workflow
 
@@ -34,4 +35,5 @@ npm run media:check
 - Portfolio photos are served as optimized WebP files in `public/media/photography/portfolio`.
 - The production site is the Cloudflare Pages project `portfolio`, published from the static `out/` export.
 - WCAL videos load on click. Set an item's `youtube_id` to its 11-character YouTube video ID to use an embed instead of its local file.
+- Reaction clips also load on click and share the campaign's single active player. Their captions and transcript downloads live in `public/docs/transcripts/`. The Facebook reaction loads the original embed on click.
 - Existing video previews load near the viewport and pause when out of view or when the tab is hidden. Reduced-motion settings disable automatic playback.

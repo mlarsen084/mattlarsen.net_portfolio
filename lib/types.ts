@@ -81,4 +81,23 @@ export type VideoCampaign = {
   campaign_url: string;
   description: string;
   items: CampaignMediaItem[];
+  reactions: MediaReaction[];
+};
+
+export type MediaReaction = {
+  id: string;
+  title: string;
+  outlet: string;
+  date?: string;
+  duration: string;
+  video?: string;
+  poster?: string;
+  facebook_url?: string;
+  quote?: string;
+  excerpt?: string;
+  summary: string;
+  source_url: string;
+  transcript_url?: string;
+  captions_url?: string;
+  segments?: { start: number; end: number; text: string }[];
 };

@@ -140,6 +140,33 @@ def main() -> None:
             ensure(isinstance(youtube_id, str) and len(youtube_id) == 11 and all(c.isalnum() or c in '-_' for c in youtube_id),
                    f'invalid campaign YouTube ID: {youtube_id}', errors)
 
+    reactions = load_json(CONTENT / 'wcal-media-reactions.json')
+    reaction_ids: set[str] = set()
+    for reaction in reactions:
+        for key in ['id', 'title', 'outlet', 'duration', 'summary', 'source_url']:
+            ensure(key in reaction, f'media reaction missing key: {key}', errors)
+        reaction_id = reaction.get('id', '')
+        ensure(reaction_id not in reaction_ids, f'duplicate reaction: {reaction_id}', errors)
+        reaction_ids.add(reaction_id)
+        ensure(bool(reaction.get('video') or reaction.get('facebook_url')), f'reaction has no video: {reaction_id}', errors)
+        for key in ['video', 'poster', 'captions_url', 'transcript_url']:
+            ref = reaction.get(key)
+            if isinstance(ref, str) and ref.startswith('/'):
+                path = resolve_public_path(ref)
+                ensure(path.is_file(), f'missing reaction {key}: {ref}', errors)
+                if key == 'video' and path.is_file():
+                    ensure(path.stat().st_size < 25 * 1024 * 1024, f'reaction exceeds hosting limit: {ref}', errors)
+        if reaction.get('video'):
+            ensure(bool(reaction.get('transcript_url') and reaction.get('captions_url')), f'reaction needs transcript and captions: {reaction_id}', errors)
+            segments = reaction.get('segments', [])
+            ensure(len(segments) > 0, f'missing transcript segments: {reaction_id}', errors)
+            previous_end = 0
+            for segment in segments:
+                start, end = segment.get('start', -1), segment.get('end', -1)
+                ensure(0 <= start < end and start >= previous_end - 0.05, f'invalid reaction transcript timing: {reaction_id}', errors)
+                ensure(bool(segment.get('text')), f'empty transcript segment: {reaction_id}', errors)
+                previous_end = end
+
     wall = load_json(CONTENT / 'wall-items.json')
     ensure(isinstance(wall, list), 'wall-items.json must be an array', errors)
     ensure(len(wall) == 30, f'wall-items count must be 30, found {len(wall)}', errors)
