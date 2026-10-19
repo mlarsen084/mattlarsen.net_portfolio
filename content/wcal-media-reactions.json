@@ -183,7 +183,13 @@
         "end": 153.94,
         "text": "My advice to Chippy would be stop talking about the ad, mate, because you are only drawing attention to something that thousands of people are now going to want to see and they're going to remember because it's quite funny."
       }
-    ]
+    ],
+    "logo": {
+      "src": "/media/logos/newstalk-zb.svg",
+      "alt": "Newstalk ZB",
+      "width": 200,
+      "height": 23
+    }
   },
   {
     "id": "hdpa-b",
@@ -309,17 +315,30 @@
         "end": 87.86,
         "text": "We're going to..."
       }
-    ]
+    ],
+    "logo": {
+      "src": "/media/logos/newstalk-zb.svg",
+      "alt": "Newstalk ZB",
+      "width": 200,
+      "height": 23
+    }
   },
   {
     "id": "herald-now-facebook",
     "title": "Herald NOW panel discussion",
-    "outlet": "Herald NOW · Shared by the New Zealand Taxpayers’ Union",
+    "outlet": "Herald NOW · NZ Herald",
     "duration": "00:56",
     "facebook_url": "https://www.facebook.com/reel/2216738805544132",
     "source_url": "https://www.facebook.com/reel/2216738805544132",
     "summary": "The panel watches the ad and debates whether it reads as satire or as an accusation of theft.",
-    "excerpt": "“It’s called satire. It’s called satire. I think people can see that.”"
+    "excerpt": "“It’s called satire. It’s called satire. I think people can see that.”",
+    "logo": {
+      "src": "/media/logos/nz-herald.svg",
+      "alt": "NZ Herald",
+      "width": 286,
+      "height": 32
+    },
+    "shared_by": "Clip shared on Facebook by the New Zealand Taxpayers’ Union."
   },
   {
     "id": "three-news-election-report",
@@ -329,6 +348,13 @@
     "youtube_id": "r4HCYbf494s",
     "source_url": "https://www.youtube.com/watch?v=r4HCYbf494s",
     "context": "Critical coverage · Wider election report",
-    "summary": "The ad appears in a wider election report about trust in Chris Hipkins and Christopher Luxon. This coverage takes a more critical view of the ad."
+    "summary": "The ad appears in a wider election report about trust in Chris Hipkins and Christopher Luxon. This coverage takes a more critical view of the ad.",
+    "logo": {
+      "src": "/media/logos/stuff.svg",
+      "alt": "Stuff",
+      "width": 48,
+      "height": 18,
+      "light_background": true
+    }
   }
 ]

@@ -88,6 +88,8 @@ export type MediaReaction = {
   id: string;
   title: string;
   outlet: string;
+  logo?: { src: string; alt: string; width: number; height: number; light_background?: boolean };
+  shared_by?: string;
   date?: string;
   duration: string;
   video?: string;

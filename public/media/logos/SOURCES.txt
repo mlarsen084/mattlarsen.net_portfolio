@@ -1,0 +1,14 @@
+Publisher logos used to identify linked media coverage.
+
+Newstalk ZB: official site footer SVG
+https://www.newstalkzb.co.nz/assets/dist/newstalkzb-horizontal-logo-white.DOBPnr3P.svg
+
+NZ Herald: official site header SVG
+https://www.nzherald.co.nz/pf/resources/logos/default.svg?d=1073
+The Facebook coverage card identifies the programme as Herald NOW.
+
+Stuff: official black wordmark, SVG paths extracted unchanged from the site's
+stuff-logo-black component (48 x 18 viewBox):
+https://www.stuff.co.nz/main.a2b104fe513c1d57.js
+
+Retrieved 20 October 2026. Logos belong to their respective publishers.

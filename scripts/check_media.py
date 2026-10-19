@@ -148,6 +148,10 @@ def main() -> None:
         reaction_id = reaction.get('id', '')
         ensure(reaction_id not in reaction_ids, f'duplicate reaction: {reaction_id}', errors)
         reaction_ids.add(reaction_id)
+        logo = reaction.get('logo')
+        if logo:
+            ensure((PUBLIC / logo.get('src', '').lstrip('/')).is_file(), f'missing reaction logo: {reaction_id}', errors)
+            ensure(bool(logo.get('alt')), f'missing reaction logo alt text: {reaction_id}', errors)
         ensure(bool(reaction.get('video') or reaction.get('facebook_url') or reaction.get('youtube_id')), f'reaction has no video: {reaction_id}', errors)
         youtube_id = reaction.get('youtube_id')
         if youtube_id:

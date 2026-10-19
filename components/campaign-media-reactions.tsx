@@ -28,6 +28,14 @@ export function CampaignMediaReactions({ reactions, playingId, onPlay, activePla
           const youtube = Boolean(reaction.youtube_id);
           return (
             <article key={reaction.id} className={`media-reaction-card${facebook || youtube ? ' media-reaction-card--external' : ''}`}>
+              {reaction.logo ? (
+                <div className="media-reaction-brand">
+                  <span className={`media-reaction-logo${reaction.logo.light_background ? ' media-reaction-logo--light' : ''}`}>
+                    <Image src={reaction.logo.src} alt={reaction.logo.alt} width={reaction.logo.width} height={reaction.logo.height} />
+                  </span>
+                  {facebook ? <span className="media-reaction-programme">Herald NOW</span> : null}
+                </div>
+              ) : null}
               <div
                 className={`media-reaction-player${facebook ? ' media-reaction-player--facebook' : ''}${youtube ? ' media-reaction-player--youtube' : ''}${playing ? ' is-playing' : ''}`}
                 ref={playing ? activePlayerRef : undefined}
@@ -73,6 +81,7 @@ export function CampaignMediaReactions({ reactions, playingId, onPlay, activePla
                 <h5>{reaction.title}</h5>
                 {reaction.quote ? <blockquote>“{reaction.quote}”</blockquote> : null}
                 <p>{reaction.summary}</p>
+                {reaction.shared_by ? <p className="media-reaction-shared-by">{reaction.shared_by}</p> : null}
                 {reaction.excerpt ? <><p className="media-reaction-source">Short excerpt</p><blockquote>{reaction.excerpt}</blockquote></> : null}
                 <div className="media-reaction-links">
                   <a href={reaction.source_url} target="_blank" rel="noreferrer">{youtube ? 'Watch full report on YouTube ↗' : facebook ? 'Watch on Facebook ↗' : 'Original broadcast ↗'}</a>
